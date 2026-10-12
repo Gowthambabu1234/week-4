@@ -263,3 +263,15 @@ print("""
 print("=" * 70)
 print("EXPERIMENT-4 COMPLETED")
 print("=" * 70)
+print("EXPERIMENT-4 COMPLETED")
+with open("output.txt", "w", encoding="utf-8") as file:
+    file.write("EXPERIMENT 4: PROMPT ENGINEERING\n\n")
+
+    for i, (original, corrected) in enumerate(
+        zip(original_responses, improved_responses), start=1
+    ):
+        file.write(f"CASE {i}\n")
+        file.write(f"ORIGINAL RESPONSE:\n{original}\n\n")
+        file.write(f"IMPROVED RESPONSE:\n{corrected}\n\n")
+
+print("Results saved to output.txt")
